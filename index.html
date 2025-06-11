@@ -10,7 +10,7 @@
 <body>
   <!-- Верхнє меню -->
   <header class="navbar">
-    <div class="logo">PartnerHub</div>
+    <div class="logo">ALTSETING Partner</div>
     <nav class="nav-links">
       <a href="#benefits">Переваги</a>
       <a href="#analytics">Аналітика</a>
@@ -93,6 +93,33 @@
       <a href="#">Instagram</a>
     </div>
   </footer>
+
+  <form id="partner-form">
+  <input type="text" name="name" placeholder="Ваше ім’я" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="text" name="business" placeholder="Назва бізнесу" required>
+  <textarea name="message" placeholder="Опис бізнесу" required></textarea>
+  <button type="submit">Надіслати</button>
+</form>
+<script>
+document.getElementById('partner-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  const response = await fetch('/api/submit-application', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+  });
+
+  if (response.ok) {
+    alert('Заявку надіслано. Очікуйте підтвердження.');
+  } else {
+    alert('Сталася помилка. Спробуйте ще раз.');
+  }
+});
+</script>
 
   <script src="script.js"></script>
 </body>
