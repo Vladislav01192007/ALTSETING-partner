@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Партнерська платформа</title>
+  <title>ALTSETING Partner</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -94,32 +94,7 @@
     </div>
   </footer>
 
-  <form id="partner-form">
-  <input type="text" name="name" placeholder="Ваше ім’я" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="text" name="business" placeholder="Назва бізнесу" required>
-  <textarea name="message" placeholder="Опис бізнесу" required></textarea>
-  <button type="submit">Надіслати</button>
-</form>
-<script>
-document.getElementById('partner-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
-
-  const response = await fetch('/api/submit-application', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(data)
-  });
-
-  if (response.ok) {
-    alert('Заявку надіслано. Очікуйте підтвердження.');
-  } else {
-    alert('Сталася помилка. Спробуйте ще раз.');
-  }
-});
-</script>
+  
 
   <script src="script.js"></script>
 </body>
