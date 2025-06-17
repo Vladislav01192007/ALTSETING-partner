@@ -22,44 +22,18 @@
       <button class="register">Реєстрація</button>
     </div>
   </header>
-
-  <!-- Hero-секція -->
-  <section class="hero">
-    <h1>Заробляй разом з нами</h1>
-    <p>Долучайся до партнерської програми та отримуй дохід від кожного клієнта</p>
-    <button class="cta-button">Стати партнером</button>
-  </section>
-
-  <!-- Переваги партнерства -->
-  <section id="benefits" class="benefits">
-    <div class="benefit">
-      <img src="icon1.svg" alt="icon">
-      <h3>Високі комісії</h3>
-      <p>Отримуй до 40% за кожного залученого клієнта</p>
-    </div>
-    <div class="benefit">
-      <img src="icon2.svg" alt="icon">
-      <h3>Швидкі виплати</h3>
-      <p>Регулярні виплати на зручний для тебе рахунок</p>
-    </div>
-    <div class="benefit">
-      <img src="icon3.svg" alt="icon">
-      <h3>Аналітика в реальному часі</h3>
-      <p>Контролюй ефективність у зручному кабінеті</p>
-    </div>
-    <div class="benefit">
-      <img src="icon4.svg" alt="icon">
-      <h3>Підтримка 24/7</h3>
-      <p>Команда завжди поруч, щоб допомогти</p>
-    </div>
-  </section>
-
-  <!-- Демонстрація аналітики -->
-  <section id="analytics" class="analytics">
-    <h2>Панель партнера</h2>
-    <img src="dashboard-screenshot.png" alt="Скріншот панелі">
-  </section>
-
+  
+<!-- Форма заявки -->
+<section id="contact" class="contact">
+  <h2>Надішліть свій бізнес-проєкт</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="Ваше ім’я" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Опишіть ваш бізнес або ідею..." required></textarea>
+    <button type="submit">Надіслати заявку</button>
+  </form>
+  <p class="form-note">Після розгляду ми надішлемо підтвердження на вашу пошту.</p>
+</section>
 
   <!-- Футер -->
   <footer class="footer">
