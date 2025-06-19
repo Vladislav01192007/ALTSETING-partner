@@ -4,26 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALTSETING Partner</title>
-  <link rel="icon" type="image/jpeg" href="logo.jpg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/jpeg" href="/static/logo.jpg">
+  <link rel="stylesheet" href="/static/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Верхнє меню -->
   <header class="navbar">
     <div class="logo">ALTSETING Partner</div>
     <nav class="nav-links">
+      <button id="register-btn" class="register-btn">Реєстрація партнера</button>
     </nav>
   </header>
 
-  <!-- Опис проекту -->
+  <!-- Модальне вікно -->
+  <div id="register-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Реєстрація партнера</h2>
+      <form id="register-form">
+        <input type="text" name="name" placeholder="Ваше ім’я" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Пароль" required>
+        <input type="text" name="eth_wallet" placeholder="Ethereum гаманець (опціонально)">
+        <input type="text" name="sol_wallet" placeholder="Solana гаманець (опціонально)">
+        <button type="submit">Зареєструватись</button>
+      </form>
+      <p id="form-message" class="form-note"></p>
+      <p>Вже маєте акаунт? <a href="/login">Увійти</a></p>
+    </div>
+  </div>
+
   <section id="about" class="about">
     <h2>Про проєкт ALTSETING Token</h2>
     <p><strong>ALTSETING</strong> — це інноваційна платформа, яка надає бізнесам та проєктам можливість створювати власну цифрову валюту на базі технології ALTSETING Token. Ми об'єднуємо блокчейн, автоматизацію та партнерські інструменти в одну екосистему.</p>
-
     <h3>Місія проєкту</h3>
     <p>Допомогти бізнесам та стартапам виходити на новий рівень через впровадження токен-економіки, нових моделей оплати та цифрової взаємодії з клієнтами.</p>
-
     <h3>Основні функції</h3>
     <ul>
       <li>Генерація персонального токена для вашого бізнесу</li>
@@ -32,7 +47,6 @@
       <li>Маркетингова підтримка і просування вашого токена</li>
       <li>Підключення криптовалютних сервісів: обмін, вивід, гаманці</li>
     </ul>
-
     <h3>Як працює партнерська програма</h3>
     <ol>
       <li>Подача заявки через сайт</li>
@@ -41,12 +55,10 @@
       <li>Підтвердження співпраці</li>
       <li>Використання токена у вашому бізнесі</li>
     </ol>
-
     <h3>Переваги</h3>
     <p>Власна криптовалюта, маркетинг-ефект, нові прибуткові моделі, гейміфікація та розширення партнерських зв'язків — усе це дає вам ALTSETING Token.</p>
   </section>
 
-  <!-- Форма заявки -->
   <section id="contact" class="contact">
     <h2>Надішліть свій бізнес-проєкт</h2>
     <form action="https://formspree.io/f/mnnvzjbp" method="POST">
@@ -58,16 +70,18 @@
     <p class="form-note">Після розгляду ми надішлемо підтвердження на вашу пошту.</p>
   </section>
 
-  <!-- Футер -->
   <footer class="footer">
     <p>© 2025 PartnerHub. Всі права захищені.</p>
     <div class="social">
-      <a href="https://x.com/altseting?s=21">X twiter</a>
+      <a href="https://x.com/altseting?s=21">X Twitter</a>
       <a href="https://t.me/ALTsetingtoken">Telegram</a>
       <a href="https://x.com/altseting_com?s=21">X Company</a>
     </div>
   </footer>
 
+  <script src="/static/script.js"></script>
+</body>
+</html>
   <script src="script.js"></script>
 </body>
 </html>
